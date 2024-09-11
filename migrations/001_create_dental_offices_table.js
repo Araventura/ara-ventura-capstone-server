@@ -14,6 +14,10 @@ export function up(knex) {
     table.string("contactPosition", 100).notNullable();
     table.string("phone", 20).notNullable();
     table.string("email", 100).notNullable();
+    table.timestamp("created_at").defaultTo(knex.fn.now());
+    table
+      .timestamp("updated_at")
+      .defaultTo(knex.raw("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"));
   });
 }
 
