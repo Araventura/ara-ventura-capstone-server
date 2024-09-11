@@ -13,8 +13,10 @@ export async function seed(knex) {
       jobTitle: "Dental Hygienist",
       description:
         "Seeking a skilled dental hygienist for routine cleanings and patient care. Must have a valid hygienist license.",
-      dateRange: { start: "2024-10-01", end: "2024-10-15" },
-      payRange: { min: 35, max: 45 },
+      dateRangeStart: "2024-10-01",
+      dateRangeEnd: "2024-10-15",
+      payRangeMin: 35,
+      payRangeMax: 45,
       status: "Open",
     },
     {
@@ -23,8 +25,10 @@ export async function seed(knex) {
       jobTitle: "Front Desk Receptionist",
       description:
         "Looking for a friendly receptionist to manage patient check-ins, appointments, and phone calls.",
-      dateRange: { start: "2024-11-01", end: "2024-11-30" },
-      payRange: { min: 18, max: 25 },
+      dateRangeStart: "2024-11-01",
+      dateRangeEnd: "2024-11-30",
+      payRangeMin: 18,
+      payRangeMax: 25,
       status: "Open",
     },
 
@@ -35,8 +39,10 @@ export async function seed(knex) {
       jobTitle: "Dental Assistant",
       description:
         "Experienced dental assistant needed to support the dentist during procedures. Must be comfortable with sterilization protocols.",
-      dateRange: { start: "2024-09-20", end: "2024-09-30" },
-      payRange: { min: 25, max: 35 },
+      dateRangeStart: "2024-09-20",
+      dateRangeEnd: "2024-09-30",
+      payRangeMin: 25,
+      payRangeMax: 35,
       status: "Open",
     },
     {
@@ -45,8 +51,10 @@ export async function seed(knex) {
       jobTitle: "Office Manager",
       description:
         "Seeking an organized office manager to oversee daily operations, manage staff, and handle billing.",
-      dateRange: { start: "2024-10-10", end: "2024-10-20" },
-      payRange: { min: 45, max: 60 },
+      dateRangeStart: "2024-10-10",
+      dateRangeEnd: "2024-10-20",
+      payRangeMin: 45,
+      payRangeMax: 60,
       status: "Open",
     },
 
@@ -57,8 +65,10 @@ export async function seed(knex) {
       jobTitle: "Dental Hygienist",
       description:
         "Experienced dental hygienist needed for patient cleanings and preventive care. Must be licensed and have excellent communication skills.",
-      dateRange: { start: "2024-11-05", end: "2024-11-19" },
-      payRange: { min: 40, max: 50 },
+      dateRangeStart: "2024-11-05",
+      dateRangeEnd: "2024-11-19",
+      payRangeMin: 40,
+      payRangeMax: 50,
       status: "Open",
     },
     {
@@ -67,8 +77,10 @@ export async function seed(knex) {
       jobTitle: "Sterilization Technician",
       description:
         "Looking for a meticulous sterilization technician to ensure all instruments and equipment are properly cleaned and sterilized.",
-      dateRange: { start: "2024-10-15", end: "2024-10-25" },
-      payRange: { min: 20, max: 28 },
+      dateRangeStart: "2024-10-15",
+      dateRangeEnd: "2024-10-25",
+      payRangeMin: 20,
+      payRangeMax: 28,
       status: "Open",
     },
 
@@ -79,8 +91,10 @@ export async function seed(knex) {
       jobTitle: "Dental Office Receptionist",
       description:
         "Friendly and organized receptionist needed to handle patient intake, appointments, and general office duties.",
-      dateRange: { start: "2024-10-01", end: "2024-10-14" },
-      payRange: { min: 19, max: 26 },
+      dateRangeStart: "2024-10-01",
+      dateRangeEnd: "2024-10-14",
+      payRangeMin: 19,
+      payRangeMax: 26,
       status: "Open",
     },
     {
@@ -89,8 +103,10 @@ export async function seed(knex) {
       jobTitle: "Dental Hygienist",
       description:
         "Dental hygienist needed to perform cleanings and assist with patient care. Must be licensed and have at least 2 years of experience.",
-      dateRange: { start: "2024-11-10", end: "2024-11-24" },
-      payRange: { min: 38, max: 48 },
+      dateRangeStart: "2024-11-10",
+      dateRangeEnd: "2024-11-24",
+      payRangeMin: 38,
+      payRangeMax: 48,
       status: "Open",
     },
 
@@ -101,8 +117,10 @@ export async function seed(knex) {
       jobTitle: "Dental Assistant",
       description:
         "Experienced dental assistant needed for chairside support, patient care, and instrument sterilization.",
-      dateRange: { start: "2024-09-15", end: "2024-09-25" },
-      payRange: { min: 27, max: 36 },
+      dateRangeStart: "2024-09-15",
+      dateRangeEnd: "2024-09-25",
+      payRangeMin: 27,
+      payRangeMax: 36,
       status: "Open",
     },
     {
@@ -111,8 +129,10 @@ export async function seed(knex) {
       jobTitle: "Dental Office Manager",
       description:
         "Office manager needed to oversee day-to-day operations, manage staff schedules, and ensure smooth patient flow.",
-      dateRange: { start: "2024-10-05", end: "2024-10-19" },
-      payRange: { min: 50, max: 65 },
+      dateRangeStart: "2024-10-05",
+      dateRangeEnd: "2024-10-19",
+      payRangeMin: 50,
+      payRangeMax: 65,
       status: "Open",
     },
   ]);
