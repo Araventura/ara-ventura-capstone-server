@@ -2,7 +2,7 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.up = function (knex) {
+export function up(knex) {
   return knex.schema.createTable("DentalJobs", (table) => {
     table.increments("id").primary();
     table.integer("officeId").unsigned().notNullable();
@@ -24,12 +24,12 @@ exports.up = function (knex) {
       .timestamp("updated_at")
       .defaultTo(knex.raw("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"));
   });
-};
+}
 
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.down = function (knex) {
+export function down(knex) {
   return knex.schema.dropTable("DentalJobs");
-};
+}
