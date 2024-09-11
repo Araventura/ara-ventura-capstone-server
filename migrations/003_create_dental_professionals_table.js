@@ -23,6 +23,10 @@ export function up(knex) {
       .notNullable()
       .checkIn([1, 2, 3, 4, 5]);
     table.text("skills");
+    table.timestamp("created_at").defaultTo(knex.fn.now());
+    table
+      .timestamp("updated_at")
+      .defaultTo(knex.raw("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"));
   });
 }
 
