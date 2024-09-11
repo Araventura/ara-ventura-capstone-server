@@ -2,9 +2,7 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-//Number next to the string declares the maximum characters per string
-
-export function up(knex) {
+exports.up = function (knex) {
   return knex.schema.createTable("DentalOffices", (table) => {
     table.increments("id").primary();
     table.string("name", 255).notNullable();
@@ -19,13 +17,12 @@ export function up(knex) {
       .timestamp("updated_at")
       .defaultTo(knex.raw("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"));
   });
-}
+};
 
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-
-export function down(knex) {
+exports.down = function (knex) {
   return knex.schema.dropTable("DentalOffices");
-}
+};
