@@ -12,7 +12,7 @@ const getProfessionals = async (req, res) => {
   }
 };
 
-const getProfessional = async (rec, res) => {
+const getProfessional = async (req, res) => {
   try {
     const professionalData = await knex("DentalProfessionals").where(
       "id",
