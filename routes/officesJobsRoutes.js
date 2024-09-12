@@ -5,12 +5,12 @@ const officeJobsRouter = express.Router();
 
 officeJobsRouter
   .route("/")
-  .get(offJobsControllers.getItems)
-  .post(offJobsControllers.postItem);
+  .get(offJobsControllers.getJobs)
+  .post(offJobsControllers.postJobs);
 
 officeJobsRouter
   .route("/:id")
-  .get(offJobsControllers.getItem)
-  .delete(offJobsControllers.deleteItem);
+  .get(offJobsControllers.getJob)
+  .delete(offJobsControllers.deleteJob);
 
 export default officeJobsRouter;
