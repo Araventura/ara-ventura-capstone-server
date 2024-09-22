@@ -24,6 +24,48 @@ const getJob = async (req, res) => {
   }
 };
 
+const postJob = async (req, res) => {
+  try {
+    const foundOffice = await knex("DentalOffices").where({
+      id: req.body.officeId,
+    });
+    if (foundOffice.length === 0) {
+      return res
+        .status(400)
+        .send(`Office with id: ${req.params.officeId} does not exist`);
+    }
+    if (
+      !req.body.officeId ||
+      !req.body.jobTitle ||
+      !req.body.description ||
+      !req.body.dateStart ||
+      !req.body.dateEnd ||
+      !req.body.payMin ||
+      !req.body.payMax ||
+      !req.body.status
+    ) {
+      return res.status(400).send("Please make sure all fields are filled in");
+    }
+
+    const result = await knex("DentalJobs").insert({
+      officeId: req.body.officeId,
+      jobTitle: req.body.jobTitle,
+      description: req.body.description,
+      dateStart: req.body.dateStart,
+      dateEnd: req.body.dateEnd,
+      payMin: req.body.payMin,
+      payMax: req.body.payMax,
+      status: req.body.status,
+    });
+
+    const newJobId = result[0];
+    const createdJob = await knex("DentalJobs").where({ id: newJobId }).first();
+    res.status(201).json(createdJob);
+  } catch (e) {
+    res.status(500).send(`Unable to create a new inventory item: ${e}`, e);
+  }
+};
+
 const deleteJob = async (req, res) => {
   try {
     const job = await knex("DentalJobs").where("id", req.params.id).first();
@@ -42,4 +84,4 @@ const deleteJob = async (req, res) => {
   }
 };
 
-export { getJobs, getJob, deleteJob };
+export { postJob, getJobs, getJob, deleteJob };
