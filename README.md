@@ -1,1 +1,3 @@
-# ara-ventura-capstone-server
+# Hi there! 👋🏻
+
+## Welcome to my capstone project.
